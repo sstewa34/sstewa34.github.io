@@ -4,7 +4,7 @@
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
-   License: none (public domain)
+   License: none (public domain)Is this saving???
 */
 
 html, body, div, span, applet, object, iframe,
@@ -103,7 +103,7 @@ p {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM ADOBE FONTS OR GOOGLE FONTS */		
 	font-size: 1.2em;
     line-height: 1.6;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 nav{
