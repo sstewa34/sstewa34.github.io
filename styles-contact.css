@@ -73,7 +73,7 @@ html, body {
     margin: 100px auto;
  	background: rgba(255, 255, 255, 0.75); /*this uses opacity of 75% for the background color*/
 	text-align: center;
-	border: 4px dashed white;
+	border: 3px dotted rgb(0, 0, 0);
 }
 
    
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-	font-family: didot;
+	font-family: cursive;
 	font-size: 1.5em;
     line-height: 1.4;
     color: #fff;
@@ -101,6 +101,7 @@ h2 {
 
 p {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM ADOBE FONTS OR GOOGLE FONTS */		
+	font-family: didot;
 	font-size: 1.2em;
     line-height: 1.6;
     color: rgb(0, 0, 0);
