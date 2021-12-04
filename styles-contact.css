@@ -60,9 +60,11 @@ html, body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: url(images/Sea.jpg) 
+  background: url(images/Sea.jpg)
 	center center fixed no-repeat;
 	background-size: cover;
+	
+	
 	
 	
 }
