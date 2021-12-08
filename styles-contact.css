@@ -96,7 +96,7 @@ h2 {
 	font-family: cursive;
 	font-size: 1.5em;
     line-height: 1.4;
-    color: #fff;
+    color: rgb(0, 0, 0);
     padding: 0px 0px;
     margin: 0px auto 25px auto;
 }
@@ -104,7 +104,7 @@ h2 {
 p {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM ADOBE FONTS OR GOOGLE FONTS */		
 	font-family: didot;
-	font-size: 1.2em;
+	font-size: 2em;
     line-height: 1.6;
     color: rgb(0, 0, 0);
 }
@@ -137,5 +137,5 @@ a{
 
 a:hover{
 	color: black;
-	background: rgba(25, 185, 137, 0.5);
+	background: rgba(24, 168, 212, 0.466);
 }
