@@ -1,0 +1,228 @@
+/*CSS DOCUMENT*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
+
+
+div.home-container { 
+	background: url(cobblestone.jpg);
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	max-width: 70em;
+    margin: auto;
+}
+
+div.container { 
+	max-width: 70em;
+    margin: auto;
+	position: relative;
+	min-height: 100vh;
+}
+
+/* >>> IMPORTANT: you have to change the wrap the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class.  */
+
+
+main { 
+	padding: 1em 1em 3em;
+	background-color: rgb(250, 250, 250);
+	grid-template-columns: 1fr 1fr;
+	}
+
+img {
+    width: 100%; /*Please leave this line.*/
+     display: block;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background: rgb(4,106,56);
+	padding: 1em 1em;
+	}
+
+body { 
+	font-family: "leksa-sans", sans-serif;
+	font-weight: 400;
+	font-style: normal; 
+	background-color: rgb(250,250,250);
+	}		
+
+div.container { 
+	position: relative; 
+	min-height: 100vh; 
+	max-width: 70em;
+    margin: auto;
+	}
+
+h1 {
+	width: 10em;
+	}
+
+h2, h3, h4 {
+	font-family: "monarcha", serif;
+	font-weight: 700;
+	font-style: normal;
+	}
+
+h2 {
+	font-size: 4em;
+	margin: .25em .1em;
+	}
+	
+h3 {
+	font-size: 2em;
+	margin: 1em .25em .5em;
+}
+
+h4{
+	font-size: 1.1em;
+	padding: 1em 0em 0em;
+	margin: 0em 0em 0em 2em;
+}
+
+a {
+	text-decoration: none;
+	}
+
+nav ul  {
+	text-align: right;
+	}
+	
+ul li 	{
+	list-style-type: none;
+	margin: auto
+}
+
+figure {
+	margin-bottom: 2em;
+}
+
+main.homepage {
+	background: none;
+}
+
+main.menu ul {
+		margin: 2em 1em 2em 1em;
+}	
+
+main.menu ul li {
+		margin: 1em 0em;
+		grid-gap: 1em;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+}	
+
+p {
+	margin: 1em .5em .5em;
+	font-family: "leksa-sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+	
+p.description {
+	grid-column: 1;
+	margin: 0em 0em 0em 2em;
+	font-family: "leksa-sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+	
+p.price {
+	grid-row: 1;
+	grid-column: 2;
+	color: rgb(4,106,56);
+	text-align: right;
+	margin: 1em 3em 0em 0em;
+	font-family: "monarcha", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+	
+nav ul li {
+	text-transform: uppercase;
+	display: inline;
+	font-family: "leksa-sans", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	margin-top: 1em;
+	margin-bottom: .75em;
+	font-size: 2em;
+	}
+	
+nav ul li a {
+	color: rgb(250,250,250);
+	padding: .25em .25em .25em;
+	}
+
+nav ul li.selected a{
+	color: rgb(107, 197, 153);
+	padding: .25em .25em .25em;
+}
+
+p.slogan {
+	font-size: 4.3em;
+	font-family: "monarcha", serif;
+	font-weight: 700;
+	font-style: normal;
+	margin: 1em .3em 1.5em;
+	color: rgb(250,250,250);	
+	}
+	
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem; 
+  box-sizing: border-box;
+  padding: .3em .5em;
+  background: rgb(4,106,56)
+}
+
+address {
+	color: rgb(250,250,250);
+	}
+
+footer p {
+	margin: .5em .25em .25em;
+	font-family: "leksa-sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+article {
+	margin: auto;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	width: 50%;
+	border-top: solid rgb(4,106,56) .15em;
+	border-bottom: solid rgb(4,106,56) .15em;
+}
+
+article.Contact {
+	color: rgb(5, 5, 5);
+	text-align: center;
+	}
+
+article.Contact p{
+	color: rgb(5,5,5)
+}
+
+@media screen and (min-width: 60em) {
+	ul{
+		Display: grid;
+		Grid-template-columns: repeat(3, 1fr);
+	}
+	nav ul  {
+		text-align: right;
+		}
+	nav ul li {
+		display: inline;
+	}
+	main.menu ul{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
