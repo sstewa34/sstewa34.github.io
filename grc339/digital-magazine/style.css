@@ -7,6 +7,10 @@ img {
     display: block;
 }
 
+body {
+    background-color: #F9F4F1;
+}
+
 div.home-container { 
 	max-width: 50em;
     margin: auto;
@@ -23,13 +27,14 @@ div.container {
 h1 {
 	width: 10em;
     margin: .25em;
+    padding: .3em 0em .3em;
 	}
 
 h2 {
-    font-family: serif;
-    font-weight: 700;
+    font-family: "rotunda-veneta", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    color:rgb(64, 117, 152)
+    color:#6D8241;
     }      
 
 section.mainstory h2{
@@ -43,14 +48,15 @@ section.addstory h2{
 }
 
 section.thirdstory h2{
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin: 0em .4em 0em;
     padding: .5em 0em 0em 0em;
-    border-top: solid rgb(64, 117, 152) .1em;
+    border-top: solid #B7957B .1em;
 }
 
 p{
-    font-family: sans-serif;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
     font-style: normal;
     color: rgb(0, 0, 0);
     margin: .15em .5em 2em;
@@ -68,15 +74,16 @@ aside section.addstory h2{
 }
 
 figcaption{
-    font-family: sans-serif;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
     font-style: italic;
     color:rgb(100, 100, 100);
     margin: .25em .5em 1em;
 }
 
 aside {
-    background-color: rgb(217, 207, 253);
-    padding: .5em .75em 1em;
+    /*background-color: #F3E9E2;*/
+    padding: 0em .75em 1em;
 }
 
 a {
@@ -94,20 +101,22 @@ ul li {
 
 nav ul li {
     display:block;
-    font-family:sans-serif;
-    font-weight: bold;
-    margin: 2em 1.5em 2em .25em;
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 2em 1.5em 2em 0em;
     font-size: 1em;
-    color:  rgb(64, 117, 152);
+    color:  #6D8241;
     }
 
+    
 nav ul li a {
-    color:  rgb(64, 117, 152);
-    padding: .25em .25em .25em;
+    color:  #6D8241;
+    padding: .25em .2em .25em;
     }
     
 nav ul li.selected a{
-    color:  rgb(64, 117, 152);
+    color:  #6D8241;
     padding: .25em .25em .25em;
     }
 
@@ -118,12 +127,12 @@ footer {
     height: 3rem; 
     box-sizing: border-box;
     padding: .3em .5em;
-    background: rgb(64, 117, 152)
+    background: #B7957B;
   }
 
   footer p {
 	margin: .5em .25em .25em;
-	font-family: sans-serif;
+	font-family: "EB Garamond", serif;
 	font-weight: 400;
 	font-style: normal;
     color:rgb(255,255,255);
@@ -146,7 +155,7 @@ footer {
     }
 
     div.container{
-        max-width: 60em;
+        max-width: 80em;
         padding: 0 1em;
         display: grid;
         grid-template-columns: 3fr 1fr;
