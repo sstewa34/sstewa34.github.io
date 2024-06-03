@@ -59,7 +59,7 @@ p{
     font-weight: 400;
     font-size: 1.25em;
     font-style: normal;
-    color: rgb(0, 0, 0);
+    color: #37372F;
     margin: .15em .5em 2em;
 	font-weight: 400;
 }
@@ -142,9 +142,7 @@ nav ul li.selected a{
     }
     section.gallery {
         position: relative;
-        display: grid;
-        grid-template-columns: 40% auto;
-        grid-gap: 1em;
+        display: inline;
     }
     
     section.gallery main {
@@ -166,7 +164,7 @@ nav ul li.selected a{
         font-family: "EB Garamond", serif;
         font-weight: 400;
         font-size: 1em;
-        color:rgb(0,0,0);
+        color:#37372F;
         margin: .25em 0em .25em;
     }
     
@@ -177,10 +175,10 @@ nav ul li.selected a{
 
 
     section.gallery nav {
-        margin-top: 3.25em;
+        margin-top: 1em;
         display: grid;
-        grid-template-rows: repeat(3,14em);
-        grid-template-columns: repeat(3,10em);
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
         grid-gap: .75em;
     }
     
@@ -213,20 +211,19 @@ nav ul li.selected a{
 
     /* newsletter */
 
+
+
+    section.newsletter {
+        position: relative;
+        display: inline;
+    }
+
     body div.container section.newsletter {
         width: 100%;
         margin: 0;
         padding: 0;
         grid-column: 1/3;
-    }
-
-    section.newsletter {
-        position: relative;
-        display: grid;
-        grid-template-columns: 60% auto;
-        grid-gap: 1em;
-    }
-    
+    }   
     section.newsletter form {
         grid-column: 1/2;
         position: relative;
@@ -248,18 +245,21 @@ section.personal-info{
     background-color: #BFC6A9;
     padding: 1em;
     margin-bottom: 1em;
+    color: #37372F;
 }
 
 section.checktype{
     background-color: #BFC6A9;
     padding: 1em;
     margin-bottom: 1em;
+    color: #37372F;
 }
 
 section.button{
     background-color: #BFC6A9;
     padding: 1em;
     margin-bottom: 0em;
+    color: #37372F;
 }
 
 section.personal-info h2{
@@ -309,11 +309,12 @@ textarea {
 	width: 100%;
 	height: 6em;
 	background: #fcfcfc;
-	border: 1px solid #B7957B;;
+	/*border: 1px solid #B7957B;*/
 	padding: 0.4em;
 	font-family: sans-serif;
 	color: #777;
 	}
+
 
     /* footer */
 
@@ -341,6 +342,140 @@ footer {
 	nav ul li {
 		display: inline;
   }
+
+}
+
+@media only screen and (min-width: 55em){
+          /* photo gallery */
+          body div.container section.gallery {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            grid-column: 1/3;
+        }
+        
+        body div.container section.gallery main{
+            position: relative;
+    
+        }
+    
+        section.gallery h2{
+            font-size: 2em;
+            margin: .1em .25em .5em;
+        }
+        section.gallery {
+            position: relative;
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-gap: 1em;
+        }
+        
+        section.gallery main {
+            grid-column: 1/2;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: calc(85% + 22.5em);
+        }
+        
+        section.gallery main figure{
+            margin: 0;
+            position: absolute;
+            opacity: 0;
+            width: 100%
+            transition: left 1s, opacity .5s;
+        }
+        
+        section.gallery main figure figcaption p{
+            font-family: "EB Garamond", serif;
+            font-weight: 400;
+            font-size: 1em;
+            color:#37372F;
+            margin: .25em 0em .25em;
+        }
+        
+        section.gallery figcaption h2{
+            font-size: 1.5em;
+            margin: .1em 0em .5em;
+        }
+    
+    
+        section.gallery nav {
+            margin-top: 3.25em;
+            display: grid;
+            grid-template-rows: repeat(3, 14em);
+            grid-template-columns: repeat(3,10em);
+            grid-gap: .75em;
+        }
+        
+        section.gallery nav label {
+            align-content: start;
+            margin: 0em;
+            padding: 0em;
+            height: auto;
+            width: auto;
+            display: grid;
+            grid-template-rows:auto auto auto;
+            grid-template-columns: auto auto auto;
+        }
+    
+        section.gallery nav label img{
+            width: 9em;
+            height: 14em;
+        }
+    
+        input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+        input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+        input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+        input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+        input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+        input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+        input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+        input:nth-of-type(8):checked ~ main figure:nth-of-type(8),
+        input:nth-of-type(9):checked ~ main figure:nth-of-type(9){
+            opacity: 1;
+        }
+    
+        section.gallery input {
+            display: none;
+        }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    
+    body{
+        background-color: #37372F;
+    }
+
+    h1 {  
+        background-image: url("stratfordplayers-logo-01.svg");  
+        background-repeat: no-repeat;  
+        background-size: contain;  
+        }
+
+    h1 img {  
+        opacity: 0;  
+    } 
+
+    p,figcaption,section.gallery main figure figcaption p{
+        color: #F9F4F1;
+    }
+
+    h2,nav ul li,nav ul li a,nav ul li.selected a{
+        color:  #ACB691;
+        }
+    
+    section.thirdstory h2{
+        border-top: solid #D4C1B0;
+    }
+
+    footer{
+        background-color: #D4C1B0;
+    }
+
+    footer p{
+        color:#37372F;
+    }
+
 }
 
   @media only screen and (min-width: 60em){
@@ -440,4 +575,113 @@ section.addstory a h2{
 section.addstory a p{
     flex: 0  0 4em;
 }
+
+
+    /* newsletter */
+
+    body div.container section.newsletter {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        grid-column: 1/3;
+    }
+
+    section.newsletter {
+        position: relative;
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-gap: 1em;
+    }
+    
+    section.newsletter form {
+        grid-column: 1/2;
+        position: relative;
+        overflow: hidden;
+    }
+
+    section.newsletter figure{
+        position: relative;
+        height:max-content;
+        margin-top: 3em;
+    }
+
+form h2{
+    font-size: 2em;
+    margin: .1em .25em .4em .4em;
+}
+
+section.personal-info{
+    background-color: #BFC6A9;
+    padding: 1em;
+    margin-bottom: 1em;
+    color: #37372F;
+}
+
+section.checktype{
+    background-color: #BFC6A9;
+    padding: 1em;
+    margin-bottom: 1em;
+    color: #37372F;
+}
+
+section.button{
+    background-color: #BFC6A9;
+    padding: 1em;
+    margin-bottom: 0em;
+    color: #37372F;
+}
+
+section.personal-info h2{
+    color: #fcfcfc;
+    font-size: 1.5em;
+    margin: 0em .4em 0em 0em;
+}
+
+section.checktype h2{
+    color: #fcfcfc;
+    font-size: 1.5em;
+    margin: 0em .4em 0em 0em;
+}
+
+section.personal-info ul li{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.personal-info ul li input[type="text"],
+section.personal-info ul li input[type="email"],
+section.personal-info ul li input[type="tel"],
+section.personal-info ul li select {
+	flex: 2 0 20em; 
+	box-sizing: border-box;
+	margin: 1em 1em .25em .25em;
+}
+
+section.personal-info ul li label{
+	flex: .5 0 5em;
+	margin: 1em 1em .25em .25em;
+}
+
+section.checktype ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.checktype ul li{
+	margin: 0 1em .5em 0em;
+	flex: 1 0 15em;
+}
+
+textarea {
+	box-sizing: border-box;
+	display: flex;
+	width: 100%;
+	height: 6em;
+	background: #fcfcfc;
+	/*border: 1px solid #B7957B;*/
+	padding: 0.4em;
+	font-family: sans-serif;
+	color: #777;
+	}
+
 }
